@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        
+        .back-btn {
+            color: #ffffff;
+            font-size: 24px;
+            text-decoration: none;
+        }
+        
+        .support-btn {
+            background-color: transparent;
+            border: 1px solid #444;
+            border-radius: 20px;
+            padding: 5px 15px;
+            color: #999;
+            display: flex;
+            align-items: center;
+        }
+        
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+        
+        .profile-pic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .edit-btn {
+            position: absolute;
+            right: 20%;
+            bottom: 0;
+            background-color: #333;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #fff;
+        }
+        
+        .name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .member-since {
+            color: #888;
+            margin-bottom: 20px;
+        }
+        
+        .card {
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .garage-card {
+            border: 1px solid #333;
+            margin-bottom: 25px;
+        }
+        
+        .icon {
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+        
+        .details {
+            flex-grow: 1;
+        }
+        
+        .arrow {
+            color: #888;
+            font-size: 18px;
+        }
+        
+        .item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid #333;
+        }
+        
+        .item-left {
+            display: flex;
+            align-items: center;
+        }
+        
+        .item-right {
+            display: flex;
+            align-items: center;
+        }
+        
+        .refresh {
+            color: #4CAF50;
+            margin-right: 15px;
+        }
+        
+        .section-title {
+            color: #666;
+            margin: 30px 0 15px 0;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+        
+        .rewards-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0;
+            border-bottom: 1px solid #333;
+        }
+        
+        .status-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #000;
+            padding: 10px 15px;
+            font-size: 12px;
+        }
+        
+        .status-left, .status-right {
+            display: flex;
+            align-items: center;
+        }
+        
+        .status-item {
+            margin-right: 10px;
+        }
+        
+        .small-text {
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <!-- Status Bar -->
+    <div class="status-bar">
+        <div class="status-left">
+            <div class="status-item">airtel</div>
+            <div class="status-item">10:37</div>
+            <div class="status-item">👁️</div>
+            <div class="status-item">N</div>
+            <div class="status-item">⏰</div>
+            <div class="status-item">💬</div>
+        </div>
+        <div class="status-right">
+            <div class="status-item">8/8</div>
+            <div class="status-item">📶</div>
+            <div class="status-item">VoLTE</div>
+            <div class="status-item">📱</div>
+            <div class="status-item">21%</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <a href="#" class="back-btn">←</a>
+            <h2>Profile</h2>
+            <button class="support-btn">💬 support</button>
+        </div>
+        
+        <!-- Profile Section -->
+        <div class="profile">
+            <div class="profile-pic">
+                <img src="/api/placeholder/100/100" alt="Profile Picture">
+            </div>
+            <h1 class="name">andaz Kumar</h1>
+            <p class="member-since">member since Dec, 2020</p>
+            <div class="edit-btn">✏️</div>
+        </div>
+        
+        <!-- Garage Card -->
+        <div class="card garage-card">
+            <div class="icon">🚗</div>
+            <div class="details">
+                <p>get to know your vehicles, inside out</p>
+                <p><strong>CRED garage</strong></p>
+            </div>
+            <div class="arrow">→</div>
+        </div>
+        
+        <!-- Credit Score -->
+        <div class="item">
+            <div class="item-left">
+                <div class="icon">⚪</div>
+                <div>credit score</div>
+            </div>
+            <div class="item-right">
+                <span class="refresh">REFRESH AVAILABLE</span>
+                <span><strong>757</strong></span>
+                <span class="arrow">→</span>
+            </div>
+        </div>
+        
+        <!-- Lifetime Cashback -->
+        <div class="item">
+            <div class="item-left">
+                <div class="icon">₹</div>
+                <div>lifetime cashback</div>
+            </div>
+            <div class="item-right">
+                <span><strong>₹3</strong></span>
+                <span class="arrow">→</span>
+            </div>
+        </div>
+        
+        <!-- Bank Balance -->
+        <div class="item">
+            <div class="item-left">
+                <div class="icon">₿</div>
+                <div>bank balance</div>
+            </div>
+            <div class="item-right">
+                <span><strong>check</strong></span>
+                <span class="arrow">→</span>
+            </div>
+        </div>
+        
+        <!-- Rewards Section -->
+        <h3 class="section-title">YOUR REWARDS & BENEFITS</h3>
+        
+        <!-- Cashback Balance -->
+        <div class="rewards-item">
+            <div>cashback balance</div>
+            <div class="item-right">
+                <span><strong>₹0</strong></span>
+                <span class="arrow">›</span>
+            </div>
+        </div>
+        
+        <!-- Coins -->
+        <div class="rewards-item">
+            <div>coins</div>
+            <div class="item-right">
+                <span><strong>26,46,583</strong></span>
+                <span class="arrow">›</span>
+            </div>
+        </div>
+        
+        <!-- Refer and Earn -->
+        <div class="rewards-item">
+            <div>
+                <div>win upto Rs 1000</div>
+                <div class="small-text">refer and earn</div>
+            </div>
+            <div class="item-right">
+                <span class="arrow">›</span>
+            </div>
+        </div>
+        
+        <!-- Transactions Section -->
+        <h3 class="section-title">TRANSACTIONS & SUPPORT</h3>
+        
+        <!-- All Transactions -->
+        <div class="rewards-item">
+            <div>all transactions</div>
+            <div class="item-right">
+                <span class="arrow">›</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Nothing needed for this static page
+    </script>
+</body>
+</html>
